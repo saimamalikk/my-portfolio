@@ -24,12 +24,12 @@ const monoFont = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Saima Kosser | Full-Stack Developer & MCA Graduate",
+  title: "Saima Kosser | Full-Stack Developer & MCA Postgraduate",
   description:
-    "Official portfolio of Saima Kosser - MCA graduate, Frontend Developer (bgsbu.ac.in), and Data Analysis Intern (IIIT Una) building modern web applications.",
+    "Official portfolio of Saima Kosser - MCA postgraduate (coursework completed, result awaited), Frontend Developer (bgsbu.ac.in), and Data Analysis Intern (IIIT Una) building modern web applications.",
   keywords: [
     "Saima Kosser",
-    "MCA Graduate",
+    "MCA Postgraduate",
     "Full-Stack Web Developer",
     "bgsbu.ac.in Frontend Developer",
     "IIIT Una Data Analysis Intern",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Saima Kosser | Full-Stack Web Developer",
     description:
-      "MCA Graduate & Full-Stack Web Developer building high-performance digital products.",
+      "MCA Postgraduate & Full-Stack Web Developer building high-performance digital products.",
   },
   robots: {
     index: true,

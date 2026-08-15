@@ -7,8 +7,8 @@ export default function AboutSection() {
   const highlights = [
     {
       icon: GraduationCap,
-      title: "MCA Graduate",
-      description: "Holds a Master of Computer Applications degree with strong foundations in software engineering and web technologies.",
+      title: "MCA Postgraduate",
+      description: "Completed Master of Computer Applications (MCA) degree coursework (final result awaited) with strong foundations in software engineering.",
     },
     {
       icon: Award,
@@ -40,7 +40,7 @@ export default function AboutSection() {
             Passionate About <span className="text-gradient-gold">Web Engineering & Design</span>
           </h2>
           <p className="text-[#A1A19A] text-sm sm:text-base md:text-lg font-sans leading-relaxed">
-            Recently graduated MCA professional with hands-on full-stack web development and data analytics experience.
+            MCA postgraduate with completed coursework (result awaited) and hands-on full-stack web development & data analytics experience.
           </p>
         </div>
 
@@ -54,7 +54,7 @@ export default function AboutSection() {
             </h3>
             
             <p className="text-[#A1A19A] text-xs sm:text-sm md:text-base leading-relaxed font-sans">
-              I am an MCA graduate and full-stack web developer based in Jammu & Kashmir, India. I specialize in building modern, performant, and user-centric web applications using cutting-edge tools like Next.js, React, TypeScript, and PostgreSQL.
+              I am an MCA postgraduate (coursework completed, result awaited) and full-stack web developer based in Jammu & Kashmir, India. I specialize in building modern, performant, and user-centric web applications using cutting-edge tools like Next.js, React, TypeScript, and PostgreSQL.
             </p>
 
             <p className="text-[#A1A19A] text-xs sm:text-sm md:text-base leading-relaxed font-sans">
@@ -64,7 +64,7 @@ export default function AboutSection() {
             <div className="pt-4 border-t border-[#ECE7E1]/10 flex flex-wrap gap-4 sm:gap-6 text-[11px] sm:text-xs font-mono text-[#D4AF37]">
               <div>
                 <span className="text-[#A1A19A] block uppercase">Education</span>
-                <span className="font-bold text-[#ECE7E1]">MCA (Master of Computer Applications)</span>
+                <span className="font-bold text-[#ECE7E1]">MCA (Completed, Result Awaited)</span>
               </div>
               <div>
                 <span className="text-[#A1A19A] block uppercase">Location</span>

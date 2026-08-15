@@ -142,11 +142,11 @@ export default function CVModal({ isOpen, onClose }: CVModalProps) {
   <div class="resume-container">
     <div class="header">
       <h1 class="name">SAIMA KOSSER</h1>
-      <div class="title">MCA Graduate | Full-Stack Web Developer & Data Analyst</div>
+      <div class="title">MCA Postgraduate (Result Awaited) | Full-Stack Web Developer & Data Analyst</div>
       <div class="contact-info">
         <span>📧 saimakossermalik@gmail.com</span>
         <span>🌐 saimakosser.dev</span>
-        <span>🎓 MCA Graduate 2026</span>
+        <span>🎓 MCA (Completed, Result Awaited)</span>
         <span>📍 Jammu & Kashmir, India</span>
       </div>
     </div>
@@ -154,7 +154,7 @@ export default function CVModal({ isOpen, onClose }: CVModalProps) {
     <div class="section">
       <div class="section-title">Executive Summary</div>
       <p style="font-size: 13.5px; color: #44403c; line-height: 1.6;">
-        Results-oriented Master of Computer Applications (MCA) graduate specializing in full-stack web engineering and statistical data analysis. Proven experience as <strong>Frontend Developer for Baba Ghulam Shah Badshah University official portal (bgsbu.ac.in)</strong> and completed a 1-month <strong>Data Analysis Internship at IIIT Una (Himachal Pradesh)</strong> focusing on Python data preprocessing, statistical Gaussian distribution modeling, and EDA. Proficient in Next.js, React, TypeScript, Python, Node.js, PostgreSQL, and Supabase.
+        Results-oriented Master of Computer Applications (MCA) postgraduate (coursework completed, final result awaited) specializing in full-stack web engineering and statistical data analysis. Proven experience as <strong>Frontend Developer for Baba Ghulam Shah Badshah University official portal (bgsbu.ac.in)</strong> and completed a 1-month <strong>Data Analysis Internship at IIIT Una (Himachal Pradesh)</strong> focusing on Python data preprocessing, statistical Gaussian distribution modeling, and EDA. Proficient in Next.js, React, TypeScript, Python, Node.js, PostgreSQL, and Supabase.
       </p>
     </div>
 
@@ -194,7 +194,7 @@ export default function CVModal({ isOpen, onClose }: CVModalProps) {
       <div class="education-item">
         <div class="item-header">
           <div class="item-title">Master of Computer Applications (MCA)</div>
-          <div class="item-date">Graduated 2026</div>
+          <div class="item-date">Coursework Completed (Result Awaited)</div>
         </div>
         <div class="item-subtitle">Postgraduate Degree</div>
         <ul class="bullets">
@@ -288,12 +288,12 @@ export default function CVModal({ isOpen, onClose }: CVModalProps) {
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-[#ECE7E1] tracking-tight">Saima Kosser</h2>
           <p className="text-[#D4AF37] font-mono text-[11px] sm:text-xs uppercase tracking-wider font-semibold">
-            MCA Graduate | Full-Stack Web Developer & Data Analyst
+            MCA Postgraduate (Result Awaited) | Full-Stack Web Developer & Data Analyst
           </p>
           <p className="text-[11px] sm:text-xs text-[#A1A19A] font-mono flex flex-wrap gap-3 sm:gap-4 pt-1">
             <span>📧 saimakossermalik@gmail.com</span>
             <span>📍 Jammu & Kashmir, India</span>
-            <span>🎓 MCA Graduate 2026</span>
+            <span>🎓 MCA (Completed, Result Awaited)</span>
           </p>
         </div>
 
@@ -306,7 +306,7 @@ export default function CVModal({ isOpen, onClose }: CVModalProps) {
               <Sparkles className="w-4 h-4 text-[#D4AF37]" /> Professional Summary
             </h3>
             <p className="leading-relaxed bg-[#121210] p-4 rounded-xl border border-[#ECE7E1]/10 text-[#ECE7E1] font-sans">
-              Results-oriented Master of Computer Applications (MCA) graduate specializing in full-stack web development and statistical data analysis. Experienced as a <strong className="text-[#D4AF37]">Frontend Developer for Baba Ghulam Shah Badshah University official website (bgsbu.ac.in)</strong> and completed a 1-month <strong className="text-[#D4AF37]">Data Analysis Internship at IIIT Una, Himachal Pradesh</strong> (focusing on Python, NumPy, SciPy & Normal Distribution statistical probability modeling).
+              Results-oriented Master of Computer Applications (MCA) postgraduate (coursework completed, final result awaited) specializing in full-stack web development and statistical data analysis. Experienced as a <strong className="text-[#D4AF37]">Frontend Developer for Baba Ghulam Shah Badshah University official website (bgsbu.ac.in)</strong> and completed a 1-month <strong className="text-[#D4AF37]">Data Analysis Internship at IIIT Una, Himachal Pradesh</strong> (focusing on Python, NumPy, SciPy & Normal Distribution statistical probability modeling).
             </p>
           </div>
 
@@ -363,7 +363,7 @@ export default function CVModal({ isOpen, onClose }: CVModalProps) {
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <h4 className="text-base font-serif font-bold text-[#ECE7E1]">Master of Computer Applications (MCA)</h4>
                 <span className="px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-300 text-xs font-mono">
-                  Graduated 2026
+                  Coursework Completed (Result Awaited)
                 </span>
               </div>
               <p className="text-xs text-[#D4AF37] font-mono">Specialization: Full-Stack Web Development & Data Analytics</p>

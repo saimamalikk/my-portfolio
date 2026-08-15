@@ -46,7 +46,7 @@ export default function HeroSection() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
               <span className="text-[11px] sm:text-xs font-mono text-[#D4AF37] uppercase tracking-wider">
-                MCA Graduate & Full-Stack Developer
+                MCA (Completed, Result Awaited) & Full-Stack Developer
               </span>
             </div>
 
@@ -110,7 +110,7 @@ export default function HeroSection() {
         {/* Editorial Stat Badges */}
         <div className="mt-10 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-4">
           {[
-            { label: "Degree", val: "MCA 2026", icon: GraduationCap },
+            { label: "Degree", val: "MCA (Result Awaited)", icon: GraduationCap },
             { label: "Frontend", val: "bgsbu.ac.in", icon: Globe },
             { label: "Internship", val: "IIIT Una", icon: Award },
             { label: "Core Stack", val: "Next.js & SQL", icon: Zap },
