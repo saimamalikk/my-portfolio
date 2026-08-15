@@ -172,7 +172,7 @@ export default function ContactSection({ selectedServiceSubject }: ContactSectio
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                 Response: Within 24 hours
               </span>
-              <span>MCA (Result Awaited)</span>
+              <span>MCA Student</span>
             </div>
 
           </div>

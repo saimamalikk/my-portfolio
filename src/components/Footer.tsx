@@ -22,7 +22,7 @@ export default function Footer() {
               <span className="text-lg font-serif font-bold text-[#ECE7E1] tracking-wide">
                 Saima Kosser
               </span>
-              <p className="text-xs text-[#A1A19A] font-mono">MCA Postgraduate & Full-Stack Web Developer</p>
+              <p className="text-xs text-[#A1A19A] font-mono">MCA Student & Full-Stack Web Developer</p>
             </div>
           </div>
 
