@@ -59,7 +59,7 @@ export default function ProjectsSection() {
       tags: ["Full-Stack", "PHP", "JavaScript", "NLP", "Sentiment Analysis", "HTML5", "CSS3", "MySQL"],
       liveUrl: "#",
       githubUrl: "https://github.com",
-      videoUrl: "/website%20video/20260812-1206-03.9459778.mp4",
+      videoUrl: "/website%20video/20260812-1206-03.9459778%20(1).mp4",
       isFeatured: true,
       highlights: [
         "Built complete Full-Stack web application (custom Frontend UI & Backend processing)",
