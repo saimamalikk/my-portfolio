@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Preloader from "@/components/Preloader";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
@@ -25,6 +26,9 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen bg-[#07070E] text-gray-100 selection:bg-purple-500/30 selection:text-purple-200">
+      {/* Initial Animated Preloader */}
+      <Preloader />
+
       {/* Sticky Glassmorphism Header */}
       <Navbar onOpenCVModal={() => setIsCVModalOpen(true)} />
 

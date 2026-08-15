@@ -116,21 +116,69 @@ export default function SkillsSection() {
       ? skills
       : skills.filter((skill) => skill.category === activeTab);
 
+  const categoryIcons = [
+    { label: "Frontend", icon: Layout, tab: "Frontend" },
+    { label: "Backend", icon: Layers, tab: "Backend" },
+    { label: "Database", icon: Database, tab: "Database" },
+    { label: "Analytics", icon: Cpu, tab: "Backend" },
+    { label: "Responsive", icon: Globe, tab: "Frontend" },
+    { label: "Security", icon: ShieldCheck, tab: "Frontend" },
+    { label: "Logic", icon: Terminal, tab: "Frontend" },
+    { label: "Tools", icon: Wrench, tab: "Tools" },
+  ];
+
+  const skillProficiency: Record<string, number> = {
+    "Next.js": 92,
+    "React": 95,
+    "TypeScript": 88,
+    "Tailwind CSS": 94,
+    "JavaScript (ES6+)": 90,
+    "Python (Data Analysis)": 88,
+    "Node.js": 85,
+    "PHP": 82,
+    "PostgreSQL": 86,
+    "Supabase": 90,
+    "MySQL": 84,
+    "Git & GitHub": 92,
+  };
+
   return (
     <section id="skills" className="relative py-12 sm:py-20 md:py-28 lg:py-36 bg-[#121210]">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         
         {/* Section Header */}
-        <div className="text-center space-y-3 sm:space-y-4 max-w-3xl mx-auto mb-8 sm:mb-12 md:mb-16">
+        <div className="text-center space-y-3 sm:space-y-4 max-w-3xl mx-auto mb-10 sm:mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1A1A18] border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-mono uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" /> Technical Expertise
           </div>
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#ECE7E1] tracking-tight">
-            Skills & <span className="text-gradient-gold">Capabilities</span>
+            My <span className="text-gradient-gold">Skills</span>
           </h2>
           <p className="text-[#A1A19A] text-sm sm:text-base md:text-lg font-sans">
-            Core technologies, frameworks, and developer tools used to build modern digital products.
+            A comprehensive toolkit built over years of hands-on software engineering & data analysis experience.
           </p>
+        </div>
+
+        {/* Quick Category Icon Grid (Sample 4 Format) */}
+        <div className="grid grid-cols-4 sm:grid-cols-8 gap-3 sm:gap-4 max-w-4xl mx-auto mb-10">
+          {categoryIcons.map((cat, i) => {
+            const Icon = cat.icon;
+            const isSelected = activeTab === cat.tab;
+            return (
+              <button
+                key={i}
+                onClick={() => setActiveTab(cat.tab)}
+                className={`p-3.5 sm:p-4 rounded-2xl border flex flex-col items-center justify-center gap-2 transition-all duration-300 ${
+                  isSelected
+                    ? "bg-[#1A1A18] border-[#D4AF37] text-[#D4AF37] shadow-[0_0_15px_rgba(212,175,55,0.2)] scale-105"
+                    : "bg-[#1A1A18]/60 border-[#ECE7E1]/10 text-[#A1A19A] hover:text-[#ECE7E1] hover:border-[#D4AF37]/40"
+                }`}
+              >
+                <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
+                <span className="text-[10px] font-mono uppercase tracking-wider hidden sm:block">{cat.label}</span>
+              </button>
+            );
+          })}
         </div>
 
         {/* Category Filter Tabs */}
@@ -154,6 +202,7 @@ export default function SkillsSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
           {filteredSkills.map((skill, index) => {
             const Icon = skill.icon;
+            const pct = skillProficiency[skill.name] || 85;
             return (
               <motion.div
                 key={skill.name}
@@ -174,13 +223,26 @@ export default function SkillsSection() {
                   </div>
 
                   <div>
-                    <h3 className="text-lg sm:text-xl font-serif font-bold text-[#ECE7E1] group-hover:text-[#D4AF37] transition-colors">
-                      {skill.name}
-                    </h3>
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-lg sm:text-xl font-serif font-bold text-[#ECE7E1] group-hover:text-[#D4AF37] transition-colors">
+                        {skill.name}
+                      </h3>
+                      <span className="text-xs font-mono font-bold text-[#D4AF37]">{pct}%</span>
+                    </div>
+
                     <span className="text-[10px] sm:text-[11px] font-mono text-[#D4AF37] block mt-0.5 font-semibold">
                       Focus: {skill.focus}
                     </span>
-                    <p className="text-[11px] sm:text-xs text-[#A1A19A] leading-relaxed mt-2 sm:mt-2.5">
+
+                    {/* Skill Proficiency Progress Bar (Sample 4 Format) */}
+                    <div className="w-full bg-[#121210] h-1.5 rounded-full overflow-hidden mt-2.5 border border-[#ECE7E1]/10">
+                      <div
+                        className="h-full bg-gradient-to-r from-[#D4AF37] to-[#E5C07B] rounded-full transition-all duration-500"
+                        style={{ width: `${pct}%` }}
+                      />
+                    </div>
+
+                    <p className="text-[11px] sm:text-xs text-[#A1A19A] leading-relaxed mt-2.5">
                       {skill.description}
                     </p>
                   </div>
