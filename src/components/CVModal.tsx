@@ -269,13 +269,13 @@ export default function CVModal({ isOpen, onClose }: CVModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fade-in">
-      <div className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-3xl border border-[#D4AF37]/30 shadow-2xl p-6 sm:p-10 bg-[#1A1A18] text-[#ECE7E1]">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/85 backdrop-blur-md animate-fade-in">
+      <div className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-2xl sm:rounded-3xl border border-[#D4AF37]/30 shadow-2xl p-4 sm:p-8 md:p-10 bg-[#1A1A18] text-[#ECE7E1]">
         
         {/* Modal Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 p-2.5 rounded-xl bg-[#121210] hover:bg-white/10 text-[#A1A19A] hover:text-[#ECE7E1] border border-[#ECE7E1]/10 transition-colors"
+          className="absolute top-4 right-4 sm:top-6 sm:right-6 p-2 sm:p-2.5 rounded-xl bg-[#121210] hover:bg-white/10 text-[#A1A19A] hover:text-[#ECE7E1] border border-[#ECE7E1]/10 transition-colors"
           aria-label="Close modal"
         >
           <X className="w-5 h-5" />
@@ -283,14 +283,14 @@ export default function CVModal({ isOpen, onClose }: CVModalProps) {
 
         {/* Modal Header */}
         <div className="space-y-3 border-b border-[#ECE7E1]/10 pb-6 pr-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#121210] border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-mono uppercase tracking-wider">
-            <GraduationCap className="w-4 h-4 text-[#D4AF37]" /> Executive MCA Developer & Data Analyst Resume
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#121210] border border-[#D4AF37]/30 text-[#D4AF37] text-[11px] sm:text-xs font-mono uppercase tracking-wider">
+            <GraduationCap className="w-4 h-4 text-[#D4AF37] shrink-0" /> Executive MCA Developer & Data Analyst Resume
           </div>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#ECE7E1] tracking-tight">Saima Kosser</h2>
-          <p className="text-[#D4AF37] font-mono text-xs uppercase tracking-wider font-semibold">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-[#ECE7E1] tracking-tight">Saima Kosser</h2>
+          <p className="text-[#D4AF37] font-mono text-[11px] sm:text-xs uppercase tracking-wider font-semibold">
             MCA Graduate | Full-Stack Web Developer & Data Analyst
           </p>
-          <p className="text-xs text-[#A1A19A] font-mono flex flex-wrap gap-4 pt-1">
+          <p className="text-[11px] sm:text-xs text-[#A1A19A] font-mono flex flex-wrap gap-3 sm:gap-4 pt-1">
             <span>📧 saimakossermalik@gmail.com</span>
             <span>📍 Jammu & Kashmir, India</span>
             <span>🎓 MCA Graduate 2026</span>
@@ -404,17 +404,17 @@ export default function CVModal({ isOpen, onClose }: CVModalProps) {
             <span>saimakossermalik@gmail.com</span>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 w-full sm:w-auto">
             <button
               onClick={onClose}
-              className="px-5 py-2.5 rounded-xl bg-[#121210] hover:bg-white/10 text-[#A1A19A] hover:text-[#ECE7E1] border border-[#ECE7E1]/10 text-xs font-mono uppercase"
+              className="px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl bg-[#121210] hover:bg-white/10 text-[#A1A19A] hover:text-[#ECE7E1] border border-[#ECE7E1]/10 text-xs font-mono uppercase text-center"
             >
               Close Preview
             </button>
 
             <button
               onClick={handleDownloadFormattedResume}
-              className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#D4AF37] hover:bg-[#e2bd46] text-[#121210] text-xs font-mono font-bold uppercase tracking-wider shadow-lg"
+              className="flex items-center justify-center gap-2 px-4 py-2.5 sm:px-6 sm:py-2.5 rounded-xl bg-[#D4AF37] hover:bg-[#e2bd46] text-[#121210] text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider shadow-lg text-center"
             >
               <Download className="w-4 h-4" />
               <span>Download Professional Resume (HTML/PDF)</span>

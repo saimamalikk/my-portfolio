@@ -75,31 +75,31 @@ export default function ContactSection({ selectedServiceSubject }: ContactSectio
   };
 
   return (
-    <section id="contact" className="relative py-24 md:py-36 bg-[#121210]">
+    <section id="contact" className="relative py-12 sm:py-20 md:py-28 lg:py-36 bg-[#121210]">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         
         {/* Main CTA Header */}
-        <div className="text-center space-y-4 max-w-3xl mx-auto mb-16">
+        <div className="text-center space-y-3 sm:space-y-4 max-w-3xl mx-auto mb-8 sm:mb-12 md:mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1A1A18] border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-mono uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" /> Get In Touch
           </div>
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#ECE7E1] tracking-tight">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[#ECE7E1] tracking-tight">
             Let&apos;s Build Something <span className="text-gradient-gold">Great Together</span>.
           </h2>
-          <p className="text-[#A1A19A] text-base sm:text-lg font-sans">
+          <p className="text-[#A1A19A] text-sm sm:text-base md:text-lg font-sans">
             Have a project in mind, a freelance inquiry, or a full-time web developer position? I&apos;d love to connect with you.
           </p>
         </div>
 
         {/* Contact Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 md:gap-12 items-start">
           
           {/* Left Column: Direct Contact Info & Socials */}
-          <div className="lg:col-span-5 space-y-8 bg-[#1A1A18] p-8 sm:p-10 rounded-3xl border border-[#ECE7E1]/10">
+          <div className="lg:col-span-5 space-y-6 sm:space-y-8 bg-[#1A1A18] p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl border border-[#ECE7E1]/10">
             
-            <div className="space-y-4">
-              <h3 className="text-2xl font-serif font-bold text-[#ECE7E1] flex items-center gap-3">
-                <MessageSquare className="w-6 h-6 text-[#D4AF37]" />
+            <div className="space-y-3 sm:space-y-4">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-serif font-bold text-[#ECE7E1] flex items-center gap-2.5 sm:gap-3">
+                <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6 text-[#D4AF37] shrink-0" />
                 Contact Information
               </h3>
               <p className="text-xs text-[#A1A19A] leading-relaxed font-sans">
@@ -108,14 +108,14 @@ export default function ContactSection({ selectedServiceSubject }: ContactSectio
             </div>
 
             {/* Email Card with Copy Button */}
-            <div className="p-5 rounded-2xl bg-[#121210] border border-[#D4AF37]/30 space-y-3">
-              <span className="text-[11px] font-mono text-[#A1A19A] uppercase tracking-wider block">
+            <div className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-[#121210] border border-[#D4AF37]/30 space-y-2.5 sm:space-y-3">
+              <span className="text-[10px] sm:text-[11px] font-mono text-[#A1A19A] uppercase tracking-wider block">
                 Primary Email Address
               </span>
               <div className="flex items-center justify-between gap-3">
                 <a
                   href={`mailto:${emailAddress}`}
-                  className="text-sm sm:text-base font-mono text-[#D4AF37] hover:text-[#ECE7E1] transition-colors truncate font-semibold"
+                  className="text-xs sm:text-sm md:text-base font-mono text-[#D4AF37] hover:text-[#ECE7E1] transition-colors truncate font-semibold"
                 >
                   {emailAddress}
                 </a>
@@ -140,15 +140,15 @@ export default function ContactSection({ selectedServiceSubject }: ContactSectio
 
             {/* Social Buttons */}
             <div className="space-y-3">
-              <span className="text-[11px] font-mono text-[#A1A19A] uppercase tracking-wider block">
+              <span className="text-[10px] sm:text-[11px] font-mono text-[#A1A19A] uppercase tracking-wider block">
                 Professional Profiles
               </span>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 <a
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2.5 p-3.5 rounded-xl bg-[#121210] hover:bg-white/5 text-[#ECE7E1] border border-[#ECE7E1]/10 transition-all font-mono text-xs uppercase"
+                  className="flex items-center justify-center gap-2 sm:gap-2.5 p-3 sm:p-3.5 rounded-xl bg-[#121210] hover:bg-white/5 text-[#ECE7E1] border border-[#ECE7E1]/10 transition-all font-mono text-xs uppercase"
                 >
                   <LinkedinIcon className="w-4 h-4 text-[#D4AF37]" />
                   <span>LinkedIn</span>
@@ -158,7 +158,7 @@ export default function ContactSection({ selectedServiceSubject }: ContactSectio
                   href="https://github.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2.5 p-3.5 rounded-xl bg-[#121210] hover:bg-white/5 text-[#ECE7E1] border border-[#ECE7E1]/10 transition-all font-mono text-xs uppercase"
+                  className="flex items-center justify-center gap-2 sm:gap-2.5 p-3 sm:p-3.5 rounded-xl bg-[#121210] hover:bg-white/5 text-[#ECE7E1] border border-[#ECE7E1]/10 transition-all font-mono text-xs uppercase"
                 >
                   <GithubIcon className="w-4 h-4 text-[#D4AF37]" />
                   <span>GitHub</span>
@@ -178,13 +178,13 @@ export default function ContactSection({ selectedServiceSubject }: ContactSectio
           </div>
 
           {/* Right Column: Contact Form */}
-          <div className="lg:col-span-7 bg-[#1A1A18] p-8 sm:p-10 rounded-3xl border border-[#ECE7E1]/10">
+          <div className="lg:col-span-7 bg-[#1A1A18] p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl border border-[#ECE7E1]/10">
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 {/* Name field */}
-                <div className="space-y-2">
+                <div className="space-y-1.5 sm:space-y-2">
                   <label htmlFor="name" className="text-xs font-mono text-[#A1A19A] uppercase tracking-wider block">
                     Your Name <span className="text-[#D4AF37]">*</span>
                   </label>
@@ -195,12 +195,12 @@ export default function ContactSection({ selectedServiceSubject }: ContactSectio
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="e.g. Alex Johnson"
-                    className="w-full px-4 py-3 rounded-xl glass-input text-xs font-sans focus:ring-2 focus:ring-[#D4AF37]/50 bg-[#121210]"
+                    className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl glass-input text-xs font-sans focus:ring-2 focus:ring-[#D4AF37]/50 bg-[#121210]"
                   />
                 </div>
 
                 {/* Email field */}
-                <div className="space-y-2">
+                <div className="space-y-1.5 sm:space-y-2">
                   <label htmlFor="email" className="text-xs font-mono text-[#A1A19A] uppercase tracking-wider block">
                     Your Email <span className="text-[#D4AF37]">*</span>
                   </label>
@@ -211,13 +211,13 @@ export default function ContactSection({ selectedServiceSubject }: ContactSectio
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="alex@example.com"
-                    className="w-full px-4 py-3 rounded-xl glass-input text-xs font-sans focus:ring-2 focus:ring-[#D4AF37]/50 bg-[#121210]"
+                    className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl glass-input text-xs font-sans focus:ring-2 focus:ring-[#D4AF37]/50 bg-[#121210]"
                   />
                 </div>
               </div>
 
               {/* Subject field */}
-              <div className="space-y-2">
+              <div className="space-y-1.5 sm:space-y-2">
                 <label htmlFor="subject" className="text-xs font-mono text-[#A1A19A] uppercase tracking-wider block">
                   Subject / Inquiry Type
                 </label>
@@ -227,12 +227,12 @@ export default function ContactSection({ selectedServiceSubject }: ContactSectio
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                   placeholder="e.g. Website Development / Full-Time Developer Role"
-                  className="w-full px-4 py-3 rounded-xl glass-input text-xs font-sans focus:ring-2 focus:ring-[#D4AF37]/50 bg-[#121210]"
+                  className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl glass-input text-xs font-sans focus:ring-2 focus:ring-[#D4AF37]/50 bg-[#121210]"
                 />
               </div>
 
               {/* Message field */}
-              <div className="space-y-2">
+              <div className="space-y-1.5 sm:space-y-2">
                 <label htmlFor="message" className="text-xs font-mono text-[#A1A19A] uppercase tracking-wider block">
                   Message Details <span className="text-[#D4AF37]">*</span>
                 </label>
@@ -243,7 +243,7 @@ export default function ContactSection({ selectedServiceSubject }: ContactSectio
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Describe your project requirements, job offer, or questions..."
-                  className="w-full px-4 py-3 rounded-xl glass-input text-xs font-sans focus:ring-2 focus:ring-[#D4AF37]/50 resize-none bg-[#121210]"
+                  className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl glass-input text-xs font-sans focus:ring-2 focus:ring-[#D4AF37]/50 resize-none bg-[#121210]"
                 />
               </div>
 
@@ -267,7 +267,7 @@ export default function ContactSection({ selectedServiceSubject }: ContactSectio
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full flex items-center justify-center gap-2 px-8 py-3.5 text-xs font-mono uppercase font-bold tracking-wider text-[#121210] rounded-xl bg-[#D4AF37] hover:bg-[#e2bd46] transition-all shadow-lg disabled:opacity-50 disabled:pointer-events-none"
+                className="w-full flex items-center justify-center gap-2 px-5 py-3 sm:px-8 sm:py-3.5 text-[11px] sm:text-xs font-mono uppercase font-bold tracking-wider text-[#121210] rounded-xl bg-[#D4AF37] hover:bg-[#e2bd46] transition-all shadow-lg disabled:opacity-50 disabled:pointer-events-none"
               >
                 {isSubmitting ? (
                   <>

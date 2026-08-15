@@ -121,20 +121,20 @@ export default function LiveDemoModal({ isOpen, onClose, projectTitle, projectId
   const isDataAnalysis = projectId === "python-data-analysis-normal-distribution";
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-lg animate-fade-in">
-      <div className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-3xl border border-[#D4AF37]/30 shadow-2xl p-6 sm:p-8 bg-[#1A1A18] text-[#ECE7E1]">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/85 backdrop-blur-lg animate-fade-in">
+      <div className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-2xl sm:rounded-3xl border border-[#D4AF37]/30 shadow-2xl p-4 sm:p-6 md:p-8 bg-[#1A1A18] text-[#ECE7E1]">
         
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-[#ECE7E1]/10 pb-5 mb-6">
-          <div className="flex items-center gap-3">
-            <div className="p-2.5 rounded-xl bg-[#121210] border border-[#D4AF37]/40 text-[#D4AF37]">
-              {isDataAnalysis ? <Cpu className="w-5 h-5 text-[#D4AF37]" /> : <Brain className="w-5 h-5 text-[#D4AF37]" />}
+        <div className="flex items-center justify-between border-b border-[#ECE7E1]/10 pb-4 sm:pb-5 mb-5 sm:mb-6">
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            <div className="p-2 sm:p-2.5 rounded-xl bg-[#121210] border border-[#D4AF37]/40 text-[#D4AF37] shrink-0">
+              {isDataAnalysis ? <Cpu className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37]" /> : <Brain className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37]" />}
             </div>
             <div>
-              <span className="text-xs font-mono text-[#D4AF37] uppercase tracking-wider block">
+              <span className="text-[10px] sm:text-xs font-mono text-[#D4AF37] uppercase tracking-wider block">
                 {isDataAnalysis ? "Python Statistical Analysis Showcase" : "Full-Stack & NLP Sentiment Analysis Live Preview"}
               </span>
-              <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#ECE7E1]">{projectTitle}</h2>
+              <h2 className="text-base sm:text-xl md:text-2xl font-serif font-bold text-[#ECE7E1]">{projectTitle}</h2>
             </div>
           </div>
 

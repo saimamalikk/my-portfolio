@@ -168,7 +168,7 @@ export default function Rotating3DObject() {
   }, []);
 
   return (
-    <div className="relative w-full aspect-square max-w-md mx-auto flex items-center justify-center">
+    <div className="relative w-full aspect-square max-w-[260px] xs:max-w-[300px] sm:max-w-sm md:max-w-md mx-auto flex items-center justify-center">
       {/* Subtle Ambient Gold Backlight Glow */}
       <div className="absolute inset-0 rounded-full bg-[#D4AF37]/10 blur-3xl pointer-events-none" />
 

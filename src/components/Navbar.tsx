@@ -50,20 +50,20 @@ export default function Navbar({ onOpenCVModal }: NavbarProps) {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-[#121210]/90 backdrop-blur-md border-b border-[#ECE7E1]/10 py-3.5 shadow-xl"
-          : "bg-transparent py-6"
+          : "bg-transparent py-3.5 sm:py-6"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Monogram & Title */}
-        <a href="#home" className="group focus:outline-none flex items-center gap-3">
-          <div className="w-9 h-9 rounded-full bg-[#1A1A18] border border-[#D4AF37]/40 flex items-center justify-center font-serif text-[#D4AF37] font-bold text-base group-hover:border-[#D4AF37] transition-all">
+        <a href="#home" className="group focus:outline-none flex items-center gap-2.5 sm:gap-3">
+          <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#1A1A18] border border-[#D4AF37]/40 flex items-center justify-center font-serif text-[#D4AF37] font-bold text-sm sm:text-base group-hover:border-[#D4AF37] transition-all">
             S
           </div>
           <div className="flex flex-col">
-            <span className="text-lg font-serif font-bold text-[#ECE7E1] tracking-wide group-hover:text-[#D4AF37] transition-colors">
+            <span className="text-base sm:text-lg font-serif font-bold text-[#ECE7E1] tracking-wide group-hover:text-[#D4AF37] transition-colors">
               Saima Kosser
             </span>
-            <span className="text-[10px] font-mono tracking-widest text-[#A1A19A] uppercase flex items-center gap-1.5">
+            <span className="text-[9px] sm:text-[10px] font-mono tracking-widest text-[#A1A19A] uppercase flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
               Full-Stack Dev
             </span>
