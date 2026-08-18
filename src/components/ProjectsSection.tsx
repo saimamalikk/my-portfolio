@@ -45,10 +45,10 @@ export default function ProjectsSection() {
     },
     {
       id: "makeup-studio-web-app",
-      title: "Makeup Studio & Beauty Booking App",
+      title: "Makeup Studio & Beauty Booking Website",
       category: "Full-Stack",
       description:
-        "Full-stack beauty studio web application for makeup artists featuring online appointment bookings, skincare service showcases, and client consultation forms.",
+        "Full-stack beauty studio website for makeup artists featuring online appointment bookings, skincare service showcases, and client consultation forms.",
       tags: ["Full-Stack", "Next.js", "React", "Tailwind CSS"],
       image: "/images/makeup_studio_preview.jpg",
       liveUrl: "https://makeup-studio-website-one.vercel.app/",
