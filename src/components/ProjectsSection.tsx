@@ -1,24 +1,22 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import { Sparkles, ArrowUpRight, CheckCircle, Play, Globe } from "lucide-react";
+import { Sparkles, ArrowUpRight, Play, Globe, Cpu, Layers, ExternalLink } from "lucide-react";
 import { GithubIcon } from "@/components/SocialIcons";
 import LiveDemoModal from "@/components/LiveDemoModal";
 
 interface Project {
   id: string;
   title: string;
-  category: "Full-Stack" | "Web Apps" | "Data Analysis" | "Database";
+  category: "Full-Stack" | "Web Apps" | "Data Analysis";
   description: string;
-  image: string;
   tags: string[];
   liveUrl?: string;
   githubUrl?: string;
   videoUrl?: string;
   isFeatured?: boolean;
-  highlights: string[];
-  roleBadge?: string;
+  icon: any;
+  statusBadge: string;
 }
 
 export default function ProjectsSection() {
@@ -31,55 +29,43 @@ export default function ProjectsSection() {
   const projects: Project[] = [
     {
       id: "bgsbu-university-portal",
-      title: "Baba Ghulam Shah Badshah University Portal (bgsbu.ac.in)",
+      title: "bgsbu.ac.in Web Portal",
       category: "Web Apps",
-      roleBadge: "Frontend Developer",
       description:
-        "Frontend developer for the official Baba Ghulam Shah Badshah University portal (bgsbu.ac.in). Built responsive web pages, department notice boards, and student resource portals.",
-      image: "/images/bgsbu_editorial.jpg",
-      tags: ["Next.js", "React", "Node.js", "JavaScript", "Responsive UI"],
+        "Official university website frontend development for Baba Ghulam Shah Badshah University. Built for fast navigation, notice boards, and department resources.",
+      tags: ["Next.js", "React", "Node.js", "JavaScript"],
       liveUrl: "https://bgsbu.ac.in",
-      githubUrl: "https://github.com",
+      githubUrl: "https://github.com/saimamalikk",
       isFeatured: true,
-      highlights: [
-        "Built responsive web layouts for university departments & student portals",
-        "Optimized mobile rendering and navigation menus for fast page access",
-      ],
+      icon: Globe,
+      statusBadge: "Live",
     },
     {
       id: "nep-fyup-feedback",
-      title: "Student Feedback System with NLP Sentiment Analysis",
+      title: "Student Feedback App",
       category: "Full-Stack",
-      roleBadge: "Full-Stack Developer",
       description:
-        "Full-stack feedback web app with built-in NLP Sentiment Analysis that automatically classifies student reviews into Positive, Neutral, and Negative categories.",
-      image: "/images/nep_editorial.jpg",
-      tags: ["Full-Stack", "PHP", "JavaScript", "NLP", "Sentiment Analysis", "MySQL"],
+        "Full-stack web application with built-in NLP Sentiment Analysis that automatically classifies student reviews into Positive, Neutral, and Negative categories.",
+      tags: ["Full-Stack", "PHP", "NLP", "MySQL"],
       liveUrl: "#",
-      githubUrl: "https://github.com",
+      githubUrl: "https://github.com/saimamalikk",
       videoUrl: "/website%20video/20260812-1206-03.9459778%20(1).mp4",
       isFeatured: true,
-      highlights: [
-        "Built full-stack student feedback portal & admin analytics dashboard",
-        "Implemented automated NLP sentiment classification for course reviews",
-      ],
+      icon: Layers,
+      statusBadge: "Live",
     },
     {
       id: "python-data-analysis-normal-distribution",
-      title: "Python Data Analysis & Probability Modeling",
+      title: "Python Data Analysis",
       category: "Data Analysis",
-      roleBadge: "Data Analysis Intern @ IIIT Una",
       description:
-        "Data analysis and Gaussian Normal Distribution probability modeling built during IIIT Una research internship using Python, NumPy, SciPy, and Matplotlib.",
-      image: "/images/data_editorial.jpg",
-      tags: ["Python", "Data Analysis", "Normal Distribution", "NumPy", "Pandas", "Matplotlib"],
+        "Data preprocessing and Gaussian Normal Distribution probability modeling built during research internship at IIIT Una (Himachal Pradesh).",
+      tags: ["Python", "NumPy", "Pandas", "Matplotlib"],
       liveUrl: "#",
-      githubUrl: "https://github.com",
+      githubUrl: "https://github.com/saimamalikk",
       isFeatured: false,
-      highlights: [
-        "Performed statistical Gaussian distribution modeling and probability curve fitting",
-        "Calculated dataset mean, variance, z-scores, and probability density functions",
-      ],
+      icon: Cpu,
+      statusBadge: "IIIT Una",
     },
   ];
 
@@ -106,25 +92,25 @@ export default function ProjectsSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         
         {/* Section Header */}
-        <div className="text-center space-y-3 sm:space-y-4 max-w-3xl mx-auto mb-8 sm:mb-12 md:mb-16">
+        <div className="text-center space-y-3 sm:space-y-4 max-w-3xl mx-auto mb-10 sm:mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1A1A18] border border-[#D4AF37]/30 text-[#D4AF37] text-xs font-mono uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5" /> Selected Works
+            <Sparkles className="w-3.5 h-3.5" /> Selected Projects
           </div>
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#ECE7E1] tracking-tight">
-            Featured <span className="text-gradient-gold">Projects & Case Studies</span>
+            Featured <span className="text-gradient-gold">Work</span>
           </h2>
           <p className="text-[#A1A19A] text-sm sm:text-base md:text-lg font-sans">
-            Real-world web engineering experience including university portal development.
+            Clean, functional web applications and data analysis projects.
           </p>
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex items-center sm:justify-center gap-2 mb-8 sm:mb-12 md:mb-16 overflow-x-auto no-scrollbar pb-2 max-w-full px-2">
+        <div className="flex items-center sm:justify-center gap-2 mb-10 sm:mb-14 overflow-x-auto no-scrollbar pb-2 max-w-full px-2">
           {filters.map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-3.5 py-1.5 sm:px-5 sm:py-2 text-[11px] sm:text-xs font-mono tracking-wider uppercase rounded-full transition-all duration-200 ${
+              className={`px-4 py-1.5 sm:px-5 sm:py-2 text-[11px] sm:text-xs font-mono tracking-wider uppercase rounded-full transition-all duration-200 ${
                 activeFilter === filter
                   ? "bg-[#D4AF37] text-[#121210] font-bold shadow-md"
                   : "bg-[#1A1A18] text-[#A1A19A] border border-[#ECE7E1]/10 hover:text-[#ECE7E1] hover:border-[#D4AF37]/40"
@@ -135,119 +121,137 @@ export default function ProjectsSection() {
           ))}
         </div>
 
-        {/* Projects Showcase Cards Grid */}
-        <div className="space-y-8 sm:space-y-12 md:space-y-16">
-          {filteredProjects.map((project) => (
-            <div
-              key={project.id}
-              className="bg-[#1A1A18] p-4 sm:p-8 lg:p-10 rounded-2xl sm:rounded-3xl border border-[#ECE7E1]/10 hover:border-[#D4AF37]/40 transition-all duration-300 group grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center"
-            >
-              
-              {/* Project Image Preview */}
-              <div className="lg:col-span-6 relative aspect-[16/10] w-full rounded-xl sm:rounded-2xl overflow-hidden bg-[#121210] border border-[#ECE7E1]/10 shadow-xl group-hover:border-[#D4AF37]/30 transition-colors">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover object-top group-hover:scale-105 transition-transform duration-700 opacity-90"
-                />
-                
-                {project.isFeatured && (
-                  <div className="absolute top-3 left-3 sm:top-4 sm:left-4 px-2.5 py-0.5 sm:px-3.5 sm:py-1 rounded-full bg-[#121210]/90 backdrop-blur-md border border-[#D4AF37]/40 text-[#D4AF37] text-[10px] sm:text-xs font-mono font-bold flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5" /> Featured Project
+        {/* Projects Cards Grid (Reference Screenshot 3-Column Format) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+          
+          {filteredProjects.map((project) => {
+            const Icon = project.icon;
+            return (
+              <div
+                key={project.id}
+                className="bg-[#1A1A18] p-6 sm:p-7 rounded-3xl border border-[#ECE7E1]/10 hover:border-[#D4AF37]/50 transition-all duration-300 group flex flex-col justify-between space-y-6 shadow-xl relative overflow-hidden"
+              >
+                {/* Top Row: Icon & Status Badges (Reference Format) */}
+                <div className="flex items-center justify-between">
+                  <div className="p-3 rounded-2xl bg-[#121210] border border-[#D4AF37]/30 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#121210] transition-colors">
+                    <Icon className="w-5 h-5" />
                   </div>
-                )}
 
-                {project.roleBadge && (
-                  <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 px-2.5 py-0.5 sm:px-3.5 sm:py-1 rounded-full bg-[#121210]/90 backdrop-blur-md text-[#ECE7E1] text-[10px] sm:text-xs font-mono border border-[#ECE7E1]/10">
-                    Role: {project.roleBadge}
-                  </div>
-                )}
-              </div>
-
-              {/* Project Details */}
-              <div className="lg:col-span-6 space-y-4 sm:space-y-6 flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-[11px] sm:text-xs font-mono text-[#D4AF37] uppercase tracking-wider font-semibold">
-                      {project.category}
+                  <div className="flex items-center gap-2">
+                    {project.isFeatured && (
+                      <span className="px-2.5 py-1 rounded-full bg-[#121210] border border-[#D4AF37]/40 text-[#D4AF37] text-[10px] font-mono font-bold flex items-center gap-1">
+                        <Sparkles className="w-3 h-3" /> Featured
+                      </span>
+                    )}
+                    <span className="px-2.5 py-1 rounded-full bg-[#121210] border border-emerald-500/40 text-emerald-400 text-[10px] font-mono font-bold flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                      {project.statusBadge}
                     </span>
                   </div>
+                </div>
 
-                  <h3 className="text-lg sm:text-2xl lg:text-3xl font-serif font-bold text-[#ECE7E1] group-hover:text-[#D4AF37] transition-colors">
+                {/* Project Title & Short Description */}
+                <div className="space-y-3 flex-grow">
+                  <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#ECE7E1] group-hover:text-[#D4AF37] transition-colors">
                     {project.title}
                   </h3>
 
-                  <p className="text-[#A1A19A] text-xs sm:text-sm md:text-base leading-relaxed mt-2 sm:mt-3 font-sans">
+                  <p className="text-xs sm:text-sm text-[#A1A19A] leading-relaxed font-sans">
                     {project.description}
                   </p>
                 </div>
 
-                {/* Key Highlights */}
-                <div className="space-y-2 pt-2 border-t border-[#ECE7E1]/10">
-                  <h4 className="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-[#D4AF37] font-semibold">
-                    Technical Impact & Deliverables:
-                  </h4>
-                  <ul className="space-y-2">
-                    {project.highlights.map((h, i) => (
-                      <li key={i} className="flex items-center gap-2.5 text-[11px] sm:text-xs md:text-sm text-[#A1A19A]">
-                        <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#D4AF37] shrink-0" />
-                        <span>{h}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Tech Tags */}
-                <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-2">
+                {/* Tech Stack Badges (Reference Format) */}
+                <div className="flex flex-wrap gap-1.5 pt-2">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2.5 py-0.5 sm:px-3 sm:py-1 text-[10px] sm:text-xs font-mono rounded-md sm:rounded-lg bg-[#121210] border border-[#ECE7E1]/10 text-[#ECE7E1]"
+                      className="px-2.5 py-1 text-[11px] font-mono rounded-lg bg-[#121210] border border-[#ECE7E1]/10 text-[#ECE7E1]"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                {/* Action Buttons */}
-                <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-4 border-t border-[#ECE7E1]/10">
+                {/* Action Buttons at Bottom (Reference Format) */}
+                <div className="flex items-center gap-3 pt-4 border-t border-[#ECE7E1]/10">
                   <button
                     onClick={() => handleLiveDemoClick(project)}
-                    className="inline-flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#D4AF37] hover:bg-[#e2bd46] text-[#121210] text-[11px] sm:text-xs font-mono uppercase font-bold tracking-wider transition-all hover:scale-105"
+                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#D4AF37] hover:bg-[#e2bd46] text-[#121210] text-xs font-mono font-bold transition-all shadow-md hover:scale-[1.02]"
                   >
                     {project.liveUrl && project.liveUrl !== "#" ? (
                       <>
-                        <Globe className="w-4 h-4" />
-                        <span>Visit bgsbu.ac.in</span>
-                        <ArrowUpRight className="w-4 h-4" />
+                        <ExternalLink className="w-3.5 h-3.5" />
+                        <span>Visit Site</span>
                       </>
                     ) : (
                       <>
-                        <Play className="w-4 h-4 fill-[#121210]" />
+                        <Play className="w-3.5 h-3.5 fill-[#121210]" />
                         <span>Live Demo</span>
-                        <ArrowUpRight className="w-4 h-4" />
                       </>
                     )}
                   </button>
 
-                  {project.githubUrl && (
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#121210] hover:bg-[#252522] text-[#ECE7E1] border border-[#ECE7E1]/15 text-[11px] sm:text-xs font-mono uppercase tracking-wider transition-all hover:scale-105"
-                    >
-                      <GithubIcon className="w-4 h-4" />
-                      <span>GitHub Code</span>
-                    </a>
-                  )}
+                  <a
+                    href={project.githubUrl || "https://github.com/saimamalikk"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-[#121210] hover:bg-[#252522] text-[#ECE7E1] border border-[#ECE7E1]/15 text-xs font-mono transition-all hover:scale-[1.02]"
+                  >
+                    <GithubIcon className="w-4 h-4" />
+                    <span>Code</span>
+                  </a>
                 </div>
 
               </div>
+            );
+          })}
 
+          {/* Third Card: "More on GitHub" (Reference Screenshot Format) */}
+          <div className="bg-[#1A1A18] p-6 sm:p-7 rounded-3xl border border-[#D4AF37]/30 hover:border-[#D4AF37] transition-all duration-300 group flex flex-col justify-between space-y-6 shadow-xl relative overflow-hidden">
+            {/* Top Row */}
+            <div className="flex items-center justify-between">
+              <div className="p-3 rounded-2xl bg-[#121210] border border-[#D4AF37]/30 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#121210] transition-colors">
+                <GithubIcon className="w-5 h-5" />
+              </div>
+              <span className="px-2.5 py-1 rounded-full bg-[#121210] border border-[#D4AF37]/40 text-[#D4AF37] text-[10px] font-mono font-bold">
+                ⚡ Active
+              </span>
             </div>
-          ))}
+
+            {/* Title & Description */}
+            <div className="space-y-3 flex-grow">
+              <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#ECE7E1] group-hover:text-[#D4AF37] transition-colors">
+                More on GitHub
+              </h3>
+              <p className="text-xs sm:text-sm text-[#A1A19A] leading-relaxed font-sans">
+                Multiple projects covering web apps, UI tools, and data experiments. All open source and actively maintained.
+              </p>
+            </div>
+
+            {/* Badges */}
+            <div className="flex flex-wrap gap-1.5 pt-2">
+              <span className="px-2.5 py-1 text-[11px] font-mono rounded-lg bg-[#121210] border border-[#ECE7E1]/10 text-[#ECE7E1]">
+                Various
+              </span>
+              <span className="px-2.5 py-1 text-[11px] font-mono rounded-lg bg-[#121210] border border-[#ECE7E1]/10 text-[#ECE7E1]">
+                Open Source
+              </span>
+            </div>
+
+            {/* Action Button */}
+            <div className="pt-4 border-t border-[#ECE7E1]/10">
+              <a
+                href="https://github.com/saimamalikk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#D4AF37] hover:bg-[#e2bd46] text-[#121210] text-xs font-mono font-bold transition-all shadow-md hover:scale-[1.02]"
+              >
+                <span>View All →</span>
+              </a>
+            </div>
+          </div>
+
         </div>
 
       </div>
