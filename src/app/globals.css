@@ -12,11 +12,12 @@
   }
 
   body {
-    background-color: #121210;
+    background-color: #07070E;
     color: #ECE7E1;
     font-family: var(--font-sans), 'Inter', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
     touch-action: manipulation;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   h1, h2, h3, .font-serif {
@@ -28,7 +29,134 @@
   }
 }
 
-/* Editorial Typography & Gradient Helpers */
+/* ==========================================================================
+   LIGHT MODE SYSTEM OVERRIDES (Applied when <html class="light">)
+   ========================================================================== */
+html.light {
+  color-scheme: light !important;
+}
+
+html.light body {
+  background-color: #F8F6F0 !important;
+  color: #1E1E1E !important;
+}
+
+html.light main {
+  background-color: #F8F6F0 !important;
+}
+
+/* Light Mode Header & Nav Drawer */
+html.light header {
+  background-color: rgba(248, 246, 240, 0.95) !important;
+  border-color: rgba(184, 134, 11, 0.2) !important;
+}
+
+html.light header nav {
+  background-color: rgba(235, 230, 220, 0.9) !important;
+  border-color: rgba(184, 134, 11, 0.25) !important;
+}
+
+html.light header nav a {
+  color: #555550 !important;
+}
+
+html.light header nav a:hover {
+  color: #1E1E1E !important;
+  background-color: rgba(184, 134, 11, 0.15) !important;
+}
+
+/* Light Mode Cards, Panels & Containers */
+html.light .bg-\[\#1A1A18\],
+html.light .bg-\[\#121210\] {
+  background-color: #FFFFFF !important;
+  color: #1E1E1E !important;
+  border-color: rgba(184, 134, 11, 0.25) !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light .bg-\[\#1A1A18\]\/80 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+html.light .bg-\[\#121210\]\/90,
+html.light .bg-\[\#121210\]\/98 {
+  background-color: rgba(248, 246, 240, 0.96) !important;
+}
+
+/* Light Mode Text Tokens */
+html.light .text-\[\#ECE7E1\] {
+  color: #1E1E1E !important;
+}
+
+html.light .text-\[\#A1A19A\] {
+  color: #555550 !important;
+}
+
+html.light .text-\[\#D4AF37\] {
+  color: #B8860B !important;
+}
+
+/* Light Mode Borders */
+html.light .border-\[\#ECE7E1\]\/10,
+html.light .border-\[\#ECE7E1\]\/15,
+html.light .border-\[\#ECE7E1\]\/20,
+html.light .border-\[\#D4AF37\]\/30,
+html.light .border-\[\#D4AF37\]\/40,
+html.light .border-\[\#D4AF37\]\/50 {
+  border-color: rgba(184, 134, 11, 0.25) !important;
+}
+
+/* Light Mode Buttons */
+html.light .bg-\[\#D4AF37\] {
+  background-color: #B8860B !important;
+  color: #FFFFFF !important;
+}
+
+html.light .bg-\[\#D4AF37\]:hover {
+  background-color: #9A7009 !important;
+}
+
+/* Light Mode Gradients */
+html.light .text-gradient-gold {
+  background: linear-gradient(135deg, #1E1E1E 0%, #B8860B 60%, #8B6508 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html.light .text-gradient-cream {
+  background: linear-gradient(135deg, #1E1E1E 0%, #333330 70%, #555550 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Light Mode Glass Inputs & Panels */
+html.light .glass-input {
+  background: #F2EFE8 !important;
+  color: #1E1E1E !important;
+  border-color: rgba(184, 134, 11, 0.3) !important;
+}
+
+html.light .glass-panel {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(184, 134, 11, 0.2) !important;
+}
+
+/* Custom Scrollbar in Light Mode */
+html.light ::-webkit-scrollbar-track {
+  background: #F8F6F0 !important;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #D5CFC0 !important;
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #B8860B !important;
+}
+
+/* ==========================================================================
+   EDITORIAL TYPOGRAPHY & UTILITIES
+   ========================================================================== */
 .font-serif {
   font-family: var(--font-serif), 'Playfair Display', Georgia, serif;
 }
