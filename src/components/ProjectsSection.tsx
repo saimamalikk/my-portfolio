@@ -41,6 +41,19 @@ export default function ProjectsSection() {
       statusBadge: "Live",
     },
     {
+      id: "makeup-studio-web-app",
+      title: "Makeup Studio & Beauty Booking App",
+      category: "Full-Stack",
+      description:
+        "Full-stack beauty studio web application for makeup artists featuring online appointment bookings, skincare service showcases, and client consultation forms.",
+      tags: ["Full-Stack", "Next.js", "React", "Tailwind CSS"],
+      liveUrl: "https://makeup-studio-website-one.vercel.app/",
+      githubUrl: "https://github.com/saimamalikk",
+      isFeatured: true,
+      icon: Sparkles,
+      statusBadge: "Live",
+    },
+    {
       id: "nep-fyup-feedback",
       title: "Student Feedback App",
       category: "Full-Stack",
