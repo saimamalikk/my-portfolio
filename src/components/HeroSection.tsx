@@ -106,19 +106,19 @@ export default function HeroSection({ onOpenCVModal }: HeroSectionProps) {
             </div>
           </motion.div>
 
-          {/* Compact Action Buttons: View Work, Contact Me, CV */}
-          <div className="pt-2 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+          {/* Action Buttons: View Projects, Contact Me, Download CV */}
+          <div className="pt-3 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <a
               href="#projects"
-              className="group inline-flex items-center justify-center gap-1.5 px-4 py-2 sm:px-5 sm:py-2.5 text-[11px] sm:text-xs font-mono uppercase tracking-wider text-[#121210] font-bold rounded-xl bg-[#D4AF37] hover:bg-[#e2bd46] transition-all shadow-md hover:scale-105"
+              className="group inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 text-xs font-mono uppercase font-bold tracking-wider text-[#121210] rounded-xl bg-[#D4AF37] hover:bg-[#e2bd46] transition-all shadow-md hover:scale-105"
             >
-              <span>View Work</span>
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+              <span>View Projects</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
 
             <a
               href="#contact"
-              className="inline-flex items-center justify-center gap-1.5 px-4 py-2 sm:px-5 sm:py-2.5 text-[11px] sm:text-xs font-mono uppercase tracking-wider text-[#ECE7E1] rounded-xl bg-[#1A1A18]/90 backdrop-blur-md hover:bg-[#252522] border border-[#ECE7E1]/15 transition-all hover:scale-105"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 text-xs font-mono uppercase font-bold tracking-wider text-[#ECE7E1] rounded-xl bg-[#1A1A18]/90 backdrop-blur-md hover:bg-[#252522] border border-[#ECE7E1]/15 transition-all hover:scale-105"
             >
               <span>Contact Me</span>
               <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
@@ -126,10 +126,10 @@ export default function HeroSection({ onOpenCVModal }: HeroSectionProps) {
 
             <button
               onClick={onOpenCVModal}
-              className="inline-flex items-center justify-center gap-1.5 px-4 py-2 sm:px-5 sm:py-2.5 text-[11px] sm:text-xs font-mono uppercase tracking-wider text-[#ECE7E1] rounded-xl bg-[#1A1A18]/90 backdrop-blur-md hover:bg-[#252522] border border-[#D4AF37]/40 hover:border-[#D4AF37] transition-all hover:scale-105 font-bold"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 text-xs font-mono uppercase font-bold tracking-wider text-[#ECE7E1] rounded-xl bg-[#1A1A18]/90 backdrop-blur-md hover:bg-[#252522] border border-[#D4AF37]/40 hover:border-[#D4AF37] transition-all hover:scale-105"
             >
-              <Download className="w-3.5 h-3.5 text-[#D4AF37]" />
-              <span>CV</span>
+              <Download className="w-4 h-4 text-[#D4AF37]" />
+              <span>Download CV</span>
             </button>
           </div>
 
