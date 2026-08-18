@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Camera, RotateCcw, GraduationCap, Code2, Globe, Cpu } from "lucide-react";
 
 export default function AboutSection() {
-  const [profilePic, setProfilePic] = useState<string>("/images/saima_profile.jpg");
+  const [profilePic, setProfilePic] = useState<string>("/images/saima_profile.jpeg");
   const [isCustomPic, setIsCustomPic] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -33,7 +33,7 @@ export default function AboutSection() {
   };
 
   const handleResetPic = () => {
-    setProfilePic("/images/saima_profile.jpg");
+    setProfilePic("/images/saima_profile.jpeg");
     setIsCustomPic(false);
     localStorage.removeItem("user_custom_profile_pic");
   };
