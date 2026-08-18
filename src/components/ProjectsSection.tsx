@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Sparkles, ArrowUpRight, Play, Globe, Cpu, Layers, ExternalLink } from "lucide-react";
 import { GithubIcon } from "@/components/SocialIcons";
 import LiveDemoModal from "@/components/LiveDemoModal";
@@ -11,6 +12,7 @@ interface Project {
   category: "Full-Stack" | "Web Apps" | "Data Analysis";
   description: string;
   tags: string[];
+  image?: string;
   liveUrl?: string;
   githubUrl?: string;
   videoUrl?: string;
@@ -34,6 +36,7 @@ export default function ProjectsSection() {
       description:
         "Official university website frontend development for Baba Ghulam Shah Badshah University. Built for fast navigation, notice boards, and department resources.",
       tags: ["Next.js", "React", "Node.js", "JavaScript"],
+      image: "/images/bgsbu_editorial.jpg",
       liveUrl: "https://bgsbu.ac.in",
       githubUrl: "https://github.com/saimamalikk",
       isFeatured: true,
@@ -47,6 +50,7 @@ export default function ProjectsSection() {
       description:
         "Full-stack beauty studio web application for makeup artists featuring online appointment bookings, skincare service showcases, and client consultation forms.",
       tags: ["Full-Stack", "Next.js", "React", "Tailwind CSS"],
+      image: "/images/makeup_studio_preview.jpg",
       liveUrl: "https://makeup-studio-website-one.vercel.app/",
       githubUrl: "https://github.com/saimamalikk",
       isFeatured: true,
@@ -60,6 +64,7 @@ export default function ProjectsSection() {
       description:
         "Full-stack web application with built-in NLP Sentiment Analysis that automatically classifies student reviews into Positive, Neutral, and Negative categories.",
       tags: ["Full-Stack", "PHP", "NLP", "MySQL"],
+      image: "/images/nep_editorial.jpg",
       liveUrl: "#",
       githubUrl: "https://github.com/saimamalikk",
       videoUrl: "/website%20video/20260812-1206-03.9459778%20(1).mp4",
@@ -74,6 +79,7 @@ export default function ProjectsSection() {
       description:
         "Data preprocessing and Gaussian Normal Distribution probability modeling built during research internship at IIIT Una (Himachal Pradesh).",
       tags: ["Python", "NumPy", "Pandas", "Matplotlib"],
+      image: "/images/data_editorial.jpg",
       liveUrl: "#",
       githubUrl: "https://github.com/saimamalikk",
       isFeatured: false,
@@ -134,7 +140,7 @@ export default function ProjectsSection() {
           ))}
         </div>
 
-        {/* Projects Cards Grid (Reference Screenshot 3-Column Format) */}
+        {/* Projects Cards Grid (Ultra-Impressive Layout) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
           
           {filteredProjects.map((project) => {
@@ -142,21 +148,34 @@ export default function ProjectsSection() {
             return (
               <div
                 key={project.id}
-                className="bg-[#1A1A18] p-6 sm:p-7 rounded-3xl border border-[#ECE7E1]/10 hover:border-[#D4AF37]/50 transition-all duration-300 group flex flex-col justify-between space-y-6 shadow-xl relative overflow-hidden"
+                className="bg-[#1A1A18] p-5 sm:p-6 rounded-3xl border border-[#ECE7E1]/10 hover:border-[#D4AF37]/60 transition-all duration-500 group flex flex-col justify-between space-y-5 shadow-2xl relative overflow-hidden hover:-translate-y-1.5"
               >
-                {/* Top Row: Icon & Status Badges (Reference Format) */}
+                {/* High-Resolution Project Image Banner */}
+                {project.image && (
+                  <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden bg-[#121210] border border-[#ECE7E1]/10 group-hover:border-[#D4AF37]/40 transition-all">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A18] via-transparent to-transparent opacity-80" />
+                  </div>
+                )}
+
+                {/* Top Row: Icon & Status Badges */}
                 <div className="flex items-center justify-between">
-                  <div className="p-3 rounded-2xl bg-[#121210] border border-[#D4AF37]/30 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#121210] transition-colors">
-                    <Icon className="w-5 h-5" />
+                  <div className="p-2.5 rounded-2xl bg-[#121210] border border-[#D4AF37]/30 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#121210] transition-colors">
+                    <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
 
                   <div className="flex items-center gap-2">
                     {project.isFeatured && (
-                      <span className="px-2.5 py-1 rounded-full bg-[#121210] border border-[#D4AF37]/40 text-[#D4AF37] text-[10px] font-mono font-bold flex items-center gap-1">
+                      <span className="px-2.5 py-0.5 rounded-full bg-[#121210] border border-[#D4AF37]/40 text-[#D4AF37] text-[10px] font-mono font-bold flex items-center gap-1">
                         <Sparkles className="w-3 h-3" /> Featured
                       </span>
                     )}
-                    <span className="px-2.5 py-1 rounded-full bg-[#121210] border border-emerald-500/40 text-emerald-400 text-[10px] font-mono font-bold flex items-center gap-1.5">
+                    <span className="px-2.5 py-0.5 rounded-full bg-[#121210] border border-emerald-500/40 text-emerald-400 text-[10px] font-mono font-bold flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                       {project.statusBadge}
                     </span>
@@ -164,8 +183,8 @@ export default function ProjectsSection() {
                 </div>
 
                 {/* Project Title & Short Description */}
-                <div className="space-y-3 flex-grow">
-                  <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#ECE7E1] group-hover:text-[#D4AF37] transition-colors">
+                <div className="space-y-2.5 flex-grow">
+                  <h3 className="text-lg sm:text-xl font-serif font-bold text-[#ECE7E1] group-hover:text-[#D4AF37] transition-colors">
                     {project.title}
                   </h3>
 
@@ -174,12 +193,12 @@ export default function ProjectsSection() {
                   </p>
                 </div>
 
-                {/* Tech Stack Badges (Reference Format) */}
-                <div className="flex flex-wrap gap-1.5 pt-2">
+                {/* Tech Stack Badges */}
+                <div className="flex flex-wrap gap-1.5 pt-1">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2.5 py-1 text-[11px] font-mono rounded-lg bg-[#121210] border border-[#ECE7E1]/10 text-[#ECE7E1]"
+                      className="px-2.5 py-0.5 text-[10px] sm:text-[11px] font-mono rounded-lg bg-[#121210] border border-[#ECE7E1]/10 text-[#ECE7E1]"
                     >
                       {tag}
                     </span>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Preloader from "@/components/Preloader";
+import ScrollProgress from "@/components/ScrollProgress";
 import GlobalBackground3D from "@/components/GlobalBackground3D";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
@@ -27,6 +28,9 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen bg-[#07070E] text-gray-100 selection:bg-[#D4AF37]/30 selection:text-white">
+      {/* Top Glowing Gold Scroll Progress Indicator */}
+      <ScrollProgress />
+
       {/* Global Interactive 3D Particle & Wireframe Background */}
       <GlobalBackground3D />
 
