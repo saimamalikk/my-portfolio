@@ -47,17 +47,17 @@ html.light main {
 
 /* Light Mode Header & Nav Drawer */
 html.light header {
-  background-color: rgba(248, 246, 240, 0.95) !important;
+  background-color: rgba(248, 246, 240, 0.96) !important;
   border-color: rgba(184, 134, 11, 0.2) !important;
 }
 
 html.light header nav {
-  background-color: rgba(235, 230, 220, 0.9) !important;
+  background-color: rgba(235, 230, 220, 0.95) !important;
   border-color: rgba(184, 134, 11, 0.25) !important;
 }
 
 html.light header nav a {
-  color: #555550 !important;
+  color: #4A4A45 !important;
 }
 
 html.light header nav a:hover {
@@ -65,31 +65,29 @@ html.light header nav a:hover {
   background-color: rgba(184, 134, 11, 0.15) !important;
 }
 
-/* Light Mode Cards, Panels & Containers */
+/* Light Mode Cards, Pill Containers & Translucent Badges */
 html.light .bg-\[\#1A1A18\],
-html.light .bg-\[\#121210\] {
-  background-color: #FFFFFF !important;
-  color: #1E1E1E !important;
-  border-color: rgba(184, 134, 11, 0.25) !important;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08) !important;
-}
-
-html.light .bg-\[\#1A1A18\]\/80 {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-}
-
+html.light .bg-\[\#121210\],
+html.light .bg-\[\#1A1A18\]\/80,
+html.light .bg-\[\#1A1A18\]\/90,
+html.light .bg-\[\#121210\]\/50,
 html.light .bg-\[\#121210\]\/90,
 html.light .bg-\[\#121210\]\/98 {
-  background-color: rgba(248, 246, 240, 0.96) !important;
+  background-color: rgba(255, 255, 255, 0.94) !important;
+  color: #1E1E1E !important;
+  border-color: rgba(184, 134, 11, 0.25) !important;
+  box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.06) !important;
 }
 
-/* Light Mode Text Tokens */
-html.light .text-\[\#ECE7E1\] {
+/* Light Mode High-Contrast Text Tokens */
+html.light .text-\[\#ECE7E1\],
+html.light .text-gray-100 {
   color: #1E1E1E !important;
 }
 
-html.light .text-\[\#A1A19A\] {
-  color: #555550 !important;
+html.light .text-\[\#A1A19A\],
+html.light .text-gray-400 {
+  color: #3E3E38 !important;
 }
 
 html.light .text-\[\#D4AF37\] {
@@ -102,7 +100,8 @@ html.light .border-\[\#ECE7E1\]\/15,
 html.light .border-\[\#ECE7E1\]\/20,
 html.light .border-\[\#D4AF37\]\/30,
 html.light .border-\[\#D4AF37\]\/40,
-html.light .border-\[\#D4AF37\]\/50 {
+html.light .border-\[\#D4AF37\]\/50,
+html.light .border-white\/5 {
   border-color: rgba(184, 134, 11, 0.25) !important;
 }
 
@@ -124,12 +123,12 @@ html.light .text-gradient-gold {
 }
 
 html.light .text-gradient-cream {
-  background: linear-gradient(135deg, #1E1E1E 0%, #333330 70%, #555550 100%);
+  background: linear-gradient(135deg, #1E1E1E 0%, #333330 70%, #4A4A45 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Light Mode Glass Inputs & Panels */
+/* Light Mode Glass Inputs & Modals */
 html.light .glass-input {
   background: #F2EFE8 !important;
   color: #1E1E1E !important;
@@ -137,8 +136,9 @@ html.light .glass-input {
 }
 
 html.light .glass-panel {
-  background: rgba(255, 255, 255, 0.92) !important;
-  border-color: rgba(184, 134, 11, 0.2) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(184, 134, 11, 0.25) !important;
+  color: #1E1E1E !important;
 }
 
 /* Custom Scrollbar in Light Mode */
