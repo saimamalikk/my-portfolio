@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import {
   ArrowRight,
   Sparkles,
+  Download,
   Globe,
   Zap,
   Award,
@@ -12,7 +13,11 @@ import {
 } from "lucide-react";
 import Rotating3DObject from "@/components/Rotating3DObject";
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  onOpenCVModal?: () => void;
+}
+
+export default function HeroSection({ onOpenCVModal }: HeroSectionProps) {
   // Typewriter Animation State
   const roles = [
     "Full-Stack Web Developer",
@@ -101,11 +106,11 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Action Buttons */}
-          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
+          {/* Action Buttons: View Work, Contact Me, Download CV */}
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
             <a
               href="#projects"
-              className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-xs font-mono uppercase tracking-wider text-[#121210] font-bold rounded-xl bg-[#D4AF37] hover:bg-[#e2bd46] transition-all shadow-lg hover:scale-[1.02]"
+              className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs font-mono uppercase tracking-wider text-[#121210] font-bold rounded-xl bg-[#D4AF37] hover:bg-[#e2bd46] transition-all shadow-lg hover:scale-[1.02]"
             >
               <span>View My Work</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -113,11 +118,19 @@ export default function HeroSection() {
 
             <a
               href="#contact"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-xs font-mono uppercase tracking-wider text-[#ECE7E1] rounded-xl bg-[#1A1A18]/90 backdrop-blur-md hover:bg-[#252522] border border-[#ECE7E1]/15 transition-all hover:scale-[1.02]"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs font-mono uppercase tracking-wider text-[#ECE7E1] rounded-xl bg-[#1A1A18]/90 backdrop-blur-md hover:bg-[#252522] border border-[#ECE7E1]/15 transition-all hover:scale-[1.02]"
             >
               <span>Contact Me</span>
               <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
             </a>
+
+            <button
+              onClick={onOpenCVModal}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs font-mono uppercase tracking-wider text-[#ECE7E1] rounded-xl bg-[#1A1A18]/90 backdrop-blur-md hover:bg-[#252522] border border-[#D4AF37]/40 hover:border-[#D4AF37] transition-all hover:scale-[1.02]"
+            >
+              <Download className="w-4 h-4 text-[#D4AF37]" />
+              <span>Download CV</span>
+            </button>
           </div>
 
         </div>

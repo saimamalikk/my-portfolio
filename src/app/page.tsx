@@ -39,7 +39,7 @@ export default function Home() {
       {/* Main Content Sections */}
       <main>
         {/* Hero Section */}
-        <HeroSection />
+        <HeroSection onOpenCVModal={() => setIsCVModalOpen(true)} />
 
         {/* About Section */}
         <AboutSection />
