@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Download, Menu, X } from "lucide-react";
+import { Download, Menu, X, Sun, Moon } from "lucide-react";
+import { useTheme } from "@/context/ThemeContext";
 
 interface NavbarProps {
   onOpenCVModal: () => void;
@@ -11,6 +12,7 @@ export default function Navbar({ onOpenCVModal }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const { theme, toggleTheme } = useTheme();
 
   const navLinks = [
     { name: "Home", href: "#home" },
@@ -90,8 +92,17 @@ export default function Navbar({ onOpenCVModal }: NavbarProps) {
           })}
         </nav>
 
-        {/* Action Controls: Download CV */}
+        {/* Action Controls: Theme Toggle & Download CV */}
         <div className="hidden md:flex items-center gap-3">
+          <button
+            onClick={toggleTheme}
+            className="p-2.5 rounded-full bg-[#1A1A18] hover:bg-[#252522] border border-[#D4AF37]/40 text-[#D4AF37] transition-all duration-300 hover:scale-105"
+            title={theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"}
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <Sun className="w-4 h-4 text-[#D4AF37]" /> : <Moon className="w-4 h-4 text-[#D4AF37]" />}
+          </button>
+
           <button
             onClick={onOpenCVModal}
             className="flex items-center gap-2 px-5 py-2 text-xs font-mono tracking-wider uppercase text-[#ECE7E1] rounded-full bg-[#1A1A18] hover:bg-[#252522] border border-[#D4AF37]/40 hover:border-[#D4AF37] transition-all duration-300 hover:scale-105 active:scale-95"
@@ -103,6 +114,14 @@ export default function Navbar({ onOpenCVModal }: NavbarProps) {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center gap-2">
+          <button
+            onClick={toggleTheme}
+            className="p-2 text-[#D4AF37] hover:text-white rounded-lg bg-[#1A1A18] border border-[#D4AF37]/30"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+          </button>
+
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 text-[#ECE7E1] hover:text-[#D4AF37] rounded-lg bg-[#1A1A18] border border-[#ECE7E1]/10"
