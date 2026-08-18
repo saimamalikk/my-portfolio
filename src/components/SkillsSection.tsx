@@ -234,24 +234,20 @@ export default function SkillsSection() {
                       Focus: {skill.focus}
                     </span>
 
-                    {/* Skill Proficiency Progress Bar (Sample 4 Format) */}
-                    <div className="w-full bg-[#121210] h-1.5 rounded-full overflow-hidden mt-2.5 border border-[#ECE7E1]/10">
+                    {/* Skill Proficiency Progress Bar Line Fill */}
+                    <div className="w-full bg-[#121210] h-2 rounded-full overflow-hidden mt-3 border border-[#ECE7E1]/10">
                       <div
-                        className="h-full bg-gradient-to-r from-[#D4AF37] to-[#E5C07B] rounded-full transition-all duration-500"
+                        className="h-full bg-gradient-to-r from-[#D4AF37] to-[#E5C07B] rounded-full transition-all duration-500 shadow-[0_0_10px_rgba(212,175,55,0.3)]"
                         style={{ width: `${pct}%` }}
                       />
                     </div>
-
-                    <p className="text-[11px] sm:text-xs text-[#A1A19A] leading-relaxed mt-2.5">
-                      {skill.description}
-                    </p>
                   </div>
                 </div>
 
                 {/* Practical Experience Badge */}
                 <div className="pt-3 sm:pt-4 mt-3 sm:mt-4 border-t border-[#ECE7E1]/10 flex items-center justify-between text-[10px] sm:text-[11px] font-mono text-[#A1A19A]">
-                  <span className="group-hover:text-[#ECE7E1] transition-colors">Applied Experience</span>
-                  <span className="text-emerald-400 font-bold">✓ Applied</span>
+                  <span className="group-hover:text-[#ECE7E1] transition-colors">Proficiency Level</span>
+                  <span className="text-emerald-400 font-bold">✓ {pct}% Applied</span>
                 </div>
               </motion.div>
             );
