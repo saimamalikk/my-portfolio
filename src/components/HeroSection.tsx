@@ -14,7 +14,7 @@ import Rotating3DObject from "@/components/Rotating3DObject";
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative min-h-[auto] md:min-h-screen pt-24 pb-12 sm:pt-32 sm:pb-20 md:pt-40 md:pb-28 flex flex-col items-center justify-center overflow-hidden bg-[#121210]">
+    <section id="home" className="relative min-h-[auto] md:min-h-screen pt-24 pb-12 sm:pt-32 sm:pb-20 md:pt-40 md:pb-28 flex flex-col items-center justify-center overflow-hidden bg-transparent">
       
       {/* Subtle Background Grid Pattern */}
       <div className="absolute inset-0 bg-grid-pattern opacity-25 pointer-events-none" />

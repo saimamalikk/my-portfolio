@@ -9,7 +9,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-[#121210] border-t border-[#ECE7E1]/10 py-8 sm:py-12 text-[#A1A19A]">
+    <footer className="relative bg-transparent border-t border-[#ECE7E1]/10 py-8 sm:py-12 text-[#A1A19A]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8">
         
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">

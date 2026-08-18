@@ -75,7 +75,7 @@ export default function ContactSection({ selectedServiceSubject }: ContactSectio
   };
 
   return (
-    <section id="contact" className="relative py-12 sm:py-20 md:py-28 lg:py-36 bg-[#121210]">
+    <section id="contact" className="relative py-12 sm:py-20 md:py-28 lg:py-36 bg-transparent">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         
         {/* Main CTA Header */}
